@@ -1,4 +1,4 @@
-var s1 = {name: "blue hawaii", pic:"blue_hawaii.JPG", abs:"15%", taste: "Watch and see the hawaii", ingredients : ["lum","karso","coconut"] };
+var s1 = {name: "blue hawaii", pic:"blue_hawaii.jpg", abs:"15%", taste: "Watch and see the hawaii", ingredients : ["lum","karso","coconut"] };
 
 var s2 = {name: "blue monday", pic:"blue_monday.jpg", abs:"25%", taste: "Dangerous sweetness", ingredients : ["lum","sweet and sour"]};
 
