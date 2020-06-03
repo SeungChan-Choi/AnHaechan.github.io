@@ -145,23 +145,10 @@ var interestCocktails=[];
 function writeToDatabase_dislike(cocktail) {
     if ( dislikeCocktails.includes(cocktail)) return;
     dislikeCocktails.push(cocktail);
-    firebase.database().ref('/dislikeBox/').set(dislkeCocktails);
+    firebase.database().ref('/dislikeBox/').set(dislikeCocktails);
   }
 
-  function readFromDatabase_like(isListPage) {
-    return firebase.database().ref('/likeBox/').on('value', function(snapshot) {
-      
-      var myValue = snapshot.val();
-     if (myValue==null) likeCocktails=[];
-     else likeCocktails= myValue;
 
-     if (isListPage==true){
-       like_listener.click();
-     }
-
-  });
-  }
-  
   function readFromDatabase_dislike(isListPage) {
     return firebase.database().ref('/dislikeBox/').on('value', function(snapshot) {
       
