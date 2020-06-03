@@ -16,30 +16,35 @@ var dislikeContainer = document.getElementById("disliked_items");
 
 
 
-
 function addDislikeElem(item){
+
+
+  
+  var totalDiv = document.createElement("div");
+ totalDiv.setAttribute("class","col-xs-4 ml-auto");
+
+
    var itemDiv = document.createElement("div");
-  itemDiv.setAttribute("class","item col-xs-3");
-  
-  
-  var img = document.createElement("img")
-  img.setAttribute("class", "img-responsive interested_img");
-  img.setAttribute("src", "./Images/"+item.pic);
-  itemDiv.appendChild(img)
+   itemDiv.setAttribute("class", "item col-xs-12");
 
-  itemDiv.innerHTML += ("<br> <div class='central'>" + item.name+"</div> <br>");
-  itemDiv.addEventListener( "click", function(){
-    location.href='./index_detail_'+ item.name.replace(/ /g, '')  +'_example.html';
-  });
+     var img = document.createElement("img")
+     img.setAttribute("class", "img-responsive interested_img");
+     img.setAttribute("src", "./Images/"+item.pic);
+     itemDiv.appendChild(img)
 
-  dislikeContainer.appendChild(itemDiv);
+     itemDiv.innerHTML += ("<br> <div class='central'>" + item.name+"</div> <br>");
+     itemDiv.addEventListener( "click", function(){
+       location.href='./index_detail_'+ item.name.replace(/ /g, '')  +'_example.html'; // item name 따라 specify할것
+     });
 
-  
-  var marginDiv = document.createElement("div");
-  marginDiv.setAttribute("class", "col-xs-1");
 
-  dislikeContainer.appendChild(marginDiv);
+ totalDiv.appendChild(itemDiv);
+
+ dislikeContainer.appendChild(totalDiv);
+ 
 }
+
+
 
 
 function addDislikeElems(){

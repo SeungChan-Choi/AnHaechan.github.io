@@ -18,27 +18,32 @@ var interestContainer = document.getElementById("interested_items");
 
 
 function addInterestElem(item){
-   var itemDiv = document.createElement("div");
-  itemDiv.setAttribute("class","item col-xs-3");
-  
-  
-  var img = document.createElement("img")
-  img.setAttribute("class", "img-responsive interested_img");
-  img.setAttribute("src", "./Images/"+item.pic);
-  itemDiv.appendChild(img)
 
-  itemDiv.innerHTML += ("<br> <div class='central'>" + item.name+"</div> <br>");
-  itemDiv.addEventListener( "click", function(){
-    location.href='./index_detail_'+ item.name.replace(/ /g, '')  +'_example.html'; // item name 따라 specify할것
-  });
-
-  interestContainer.appendChild(itemDiv);
 
   
-  var marginDiv = document.createElement("div");
-  marginDiv.setAttribute("class", "col-xs-1");
+   var totalDiv = document.createElement("div");
+  totalDiv.setAttribute("class","col-xs-4 ml-auto");
 
-  interestContainer.appendChild(marginDiv);
+
+    var itemDiv = document.createElement("div");
+    itemDiv.setAttribute("class", "item col-xs-12");
+
+      var img = document.createElement("img")
+      img.setAttribute("class", "img-responsive interested_img");
+      img.setAttribute("src", "./Images/"+item.pic);
+      itemDiv.appendChild(img)
+
+      itemDiv.innerHTML += ("<br> <div class='central'>" + item.name+"</div> <br>");
+      itemDiv.addEventListener( "click", function(){
+        location.href='./index_detail_'+ item.name.replace(/ /g, '')  +'_example.html'; // item name 따라 specify할것
+      });
+
+
+  totalDiv.appendChild(itemDiv);
+
+  
+  interestContainer.appendChild(totalDiv);
+  
 }
 
 
