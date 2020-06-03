@@ -16,6 +16,6 @@ body{
   height:3px;
 }
 
-#interested_items{
+.list_items{
   background-color:hsl(45, 81%, 92%);
 }

@@ -1,0 +1,54 @@
+<html>
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>An Haechan 20180368</title>
+       <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-bootstrap/0.5pre/assets/css/bootstrap.min.css" rel="stylesheet" />-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="./dp4_haechan_list.css" rel="stylesheet" />
+      
+      </head>
+
+<body>
+Cocktail_bluesapphire detail page
+
+<button onclick="writeToDatabase_interest(s3)"> add to interest</button>
+<button onclick="writeToDatabase_like(s3)"> add to like</button>
+<button onclick="writeToDatabase_dislike(s3)"> add to dislike</button>
+
+
+<!--page가 전체 load 되기 전엔 disable해야함- 안그러면 오류발생-->
+<button onclick="deleteFromDatabase_interest(s3)"> remove from interest</button>
+<button onclick="deleteFromDatabase_like(s3)"> remove from like</button>
+<button onclick="deleteFromDatabase_like(s3)"> remove from dislike</button>
+
+
+
+<!-- 여기 필요한 코드  -->
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.6/firebase.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <script src="./dp4_firebase.js"></script>
+
+<script>
+    // !! firebase.js와 haechan.js -> acutal function call (X)
+    // .html간의 sharing : only via firebase!!
+    $(document).ready(function() { 
+    readFromDatabase_interest(false);
+    readFromDatabase_like(false);
+    readFromDatabase_dislike(false);
+    
+
+    });
+</script>
+
+</body>
+</html>

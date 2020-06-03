@@ -2,10 +2,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>An Haechan 20180368</title>
+    <title>Like list</title>
    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-bootstrap/0.5pre/assets/css/bootstrap.min.css" rel="stylesheet" />-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link href="./dp4_haechan.css" rel="stylesheet" />
+    <link href="./dp4_haechan_list.css" rel="stylesheet" />
   
   </head>
 
@@ -15,12 +15,12 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs">
-                <h1> Interested </h1>
+                <h1> Like </h1>
             </div>
         </div>
         <div class="row">
             <div class="col-xs">
-                <div class="container" id="interested_items">
+                <div class="container list_items" id="liked_items">
                 </div>
             </div>
         </div>
@@ -34,6 +34,21 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.6/firebase.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="./dp4_haechan.js"></script>
+    <script src="./dp4_firebase.js"></script>
+    <script src="./dp4_haechan_list_like.js"></script>
+    <script>
+        // !! firebase.js와 haechan.js -> acutal function call (X)
+        // .html간의 sharing : only via firebase!!
+        $(document).ready(function() { 
+        readFromDatabase_interest(false);
+        readFromDatabase_like(true);
+        readFromDatabase_dislike(false);
+        
+        addLikeElems();
+        
+
+        });
+    </script>
+    
   </body>
 </html>
