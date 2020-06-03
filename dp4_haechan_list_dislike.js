@@ -27,7 +27,7 @@ function addDislikeElem(item){
   img.setAttribute("src", "./Images/"+item.pic);
   itemDiv.appendChild(img)
 
-  itemDiv.innerHTML += ("<br>" + item.name+"<br>");
+  itemDiv.innerHTML += ("<br> <div class='central'>" + item.name+"</div> <br>");
   itemDiv.addEventListener( "click", function(){
     location.href='./index_detail_'+ item.name.replace(/ /g, '')  +'_example.html';
   });
@@ -36,7 +36,7 @@ function addDislikeElem(item){
 
   
   var marginDiv = document.createElement("div");
-  marginDiv.setAttribute("class", "item col-xs-1");
+  marginDiv.setAttribute("class", "col-xs-1");
 
   dislikeContainer.appendChild(marginDiv);
 }

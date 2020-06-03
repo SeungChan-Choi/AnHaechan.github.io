@@ -67,7 +67,13 @@ var interestCocktails=[];
  //interest
 
   function writeToDatabase_interest(cocktail) {
-      if ( interestCocktails.includes(cocktail)) return;
+    name = cocktail['name'];
+    names =[];
+    for (var i=0;i<interestCocktails.length; i++){
+      names.push(interestCocktails[i]['name']);
+    }
+    if (names.includes(name)) return;
+   
     interestCocktails.push(cocktail);
     firebase.database().ref('/interestBox/').set(interestCocktails);
   }
@@ -104,7 +110,12 @@ var interestCocktails=[];
   //like
 
   function writeToDatabase_like(cocktail) {
-    if ( likeCocktails.includes(cocktail)) return;
+    name = cocktail['name'];
+    names =[];
+    for (var i=0;i<likeCocktails.length; i++){
+      names.push(likeCocktails[i]['name']);
+    }
+    if (names.includes(name)) return;
     likeCocktails.push(cocktail);
     firebase.database().ref('/likeBox/').set(likeCocktails);
   }
@@ -143,7 +154,12 @@ var interestCocktails=[];
 //dislike
 
 function writeToDatabase_dislike(cocktail) {
-    if ( dislikeCocktails.includes(cocktail)) return;
+  name = cocktail['name'];
+  names =[];
+  for (var i=0;i<dislikeCocktails.length; i++){
+    names.push(dislikeCocktails[i]['name']);
+  }
+  if (names.includes(name)) return;
     dislikeCocktails.push(cocktail);
     firebase.database().ref('/dislikeBox/').set(dislikeCocktails);
   }

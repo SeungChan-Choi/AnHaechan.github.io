@@ -1,5 +1,7 @@
 .item{
-    background-color:hsl(0,100%,100%);
+    background-color: white; /*hsl(45, 81%, 92%);*/
+    border-radius: 15px;
+    margin-bottom:20px;
   }
 
 body{
@@ -16,6 +18,12 @@ body{
   height:3px;
 }
 
+/*
 .list_items{
   background-color:hsl(45, 81%, 92%);
+}
+*/
+
+.central{
+  text-align: center;
 }
